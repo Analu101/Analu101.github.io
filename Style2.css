@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+::selection {
+  color: #000;
+  background: #fff;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #efefef;
+  flex-wrap: wrap;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  background: #DED0BB;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1;
+}
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.menu ul {
+  display: inline-flex;
+}
+
+.menu ul li {
+  list-style: none;
+  margin-left: 7px;
+}
+
+.menu ul li:first-child {
+  margin-left: 0px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #5C3F14;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+  background: #fff;
+  color: black;
+}
+
+section{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #efefef;
+  flex-wrap: wrap;
+}
+
+.card {
+
+  position: relative;
+  width: 300px;
+  height: 480px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: .5s;
+  margin: 50px 20px 50px 20px;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px #5C3F14;
+  transform: translateY(-15px);
+}
+
+.card .head {
+  height: 125px;
+  width: 100%;
+  position: relative;
+}
+
+.card .head .circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #DED0BB;
+  bottom: 0;
+}
+
+.card .head .img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  bottom: -30%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card .head .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card .description {
+  height: 200px;
+  padding: 40px 20px 20px 20px;
+
+  text-align: center;
+}
+
+.card .description h3 {
+  color: #5C3F14;
+}
+
+.card .description h4 {
+  color: #5C3F14;
+}
+
+.card .description p {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.card .contact {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;  /*Se le designa espacio al navegador*/
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #000;
+  background: #fff; /* Se crea la sección se le da color y fondo*/
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Se crea el navegador*/
+  min-height: 100vh;
+  background: #efefef;
+  flex-wrap: wrap;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  background: #DED0BB;  /*Se le asigna el color del navegador, además del espacio y lo configuaración de espacio*/
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1;
+}
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*Se crea el menu, se centra y se le da un margen y catidad de px*/
+  padding: 0 20px;
+}
+
+.menu ul {
+  display: inline-flex; /*Le dará flexibilidad al menu, se ajustara a la pestaña*/
+}
+
+.menu ul li {
+  list-style: none; /*Quita las viñetas del lustado*/
+  margin-left: 7px; /*hace un margen a le izquierda*/
+}
+
+.menu ul li:first-child {
+  margin-left: 0px; /*declara que no habrá espacio*/
+}
+
+.menu ul li a {
+  text-decoration: none; /*no decoración o modificaciones*/
+  color: #5C3F14; /*Color de la letra del menú*/
+  font-size: 18px; /*tamaño de la letra del menú*/
+  font-weight: 500;  /*negrita a la letra*/
+  padding: 8px 15px; /*espaciado de los bordes*/
+  border-radius: 5px; /*se hace que los bordes sean redondos*/
+  transition: all 0.3s ease; /*tiempo de la animación del botón*/
+}
+
+.menu ul li a:hover {
+  background: #fff;  
+  color: black; /*hace que el texto que fue enlazado le parezca un color*/
+}
+section {
+   margin-top: 200px; /* Ajusta la cantidad de espacio según sea necesario */
+  clear: both; /*Limpia lo que esta flotando, para dejar un espacio para que siga el flujo xd */
+ width: 90%; /* El espacio que utilizará la section */
+
+ }
+  /* Se crea carta */
+ .card {
+  position: relative; /* La posición cambia */
+  width: 250px; /* ancho de la carta */
+  height: 250px; /* alto de la carta */
+  color: #2e2d31; /* color de la carta*/
+  background: #DED0BB;  /* color de la carta*/
+  overflow: hidden; /*Establece que lo que no esta dentro de la carta se recorta*/
+  border-radius: 20px; /*borde redondea/do*/
+   margin: 15px 10px; /*margen*/
+    float: left; /*todo este puesto hacia la derecha*/
+}
+
+
+.card_title { /*el titulo de la carta*/
+  font-weight: bold; /*tipografía*/
+}
+
+.card_content {
+  position: absolute; /*Posición absoluta*/
+  left: 0; /*Se alinea el contenedor*/
+  bottom: 0; /*distancia entre el borde inferior*/
+  width: 100%;  /*Posición absoluta*/
+  padding: 20px; /*Se agrega un relleno*/
+  background: #DED0BB; /*color del fondo, un beige claro en este caso :7*/
+  border-top-left-radius: 20px; /*Agrega un radio, haciendolo redonda*/
+  transform: translateY(150px); /*hace el efecto de transición*/
+  transition: transform .25s; /*Establece el tiempo del deplazamiento*/
+}
+
+.card_content::before {
+  content: '';
+  position: absolute;
+  top: -47px;
+  right: -45px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-175deg);
+  border-radius: 50%;
+  box-shadow: inset 48px 48px #DED0BB;
+}
+
+.card_title {
+  color: #131313;
+   font-size: 25px;
+  line-height: 25px;
+}
+
+.card_subtitle {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card_description {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.card:hover .card_content {
+  transform: translateY(0);
+}
+
+.card:hover .card_description {
+  opacity: 1;
+  transition-delay: .25s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
